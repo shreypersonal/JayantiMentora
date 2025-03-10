@@ -1,0 +1,203 @@
+import Config from 'react-native-config'
+
+export enum ApiMethod {
+  Delete = 'delete',
+  Get = 'get',
+  Patch = 'patch',
+  Post = 'post',
+  Put = 'put',
+}
+
+export enum ApiStatusCode {
+  BadRequest = 400,
+  Created = 201,
+  Forbidden = 403,
+  MethodNotFound = 405,
+  NetworkError = 'ERR_NETWORK',
+  NoContent = 204,
+  NotFound = 404,
+  ServerError = 500,
+  Success = 200,
+  Unauthorized = 401,
+}
+
+export const API = {
+  baseUrl: Config.API_BASE_URL,
+  tbkUrl: Config.TBK_URL,
+  config: {
+    headers: {
+      'Accept': 'application/json',
+      'Authorization': '',
+      'Content-Type': 'application/json',
+    },
+  },
+  tbkHeader: {
+    'Apikey': Config.TBK_API_KEY,
+    'Authorization': '',
+    'Content-Type': 'multipart/form-data',
+  },
+  endPoints: {
+    AIRPORT: 'airport',
+    AREA_ID: 'area_id',
+    BOOK_A_STAY: 'book_a_stay',
+    CATAMARAN: 'catamaran',
+    CATAMARAN_CONFIG: 'catamaran_configs',
+    CATEGORY: 'category',
+    CLEANINGS: 'cleanings',
+    COMPLAINTS: 'complaints',
+    CONFIG: 'configs',
+    DEMAND: 'demand',
+    DOCUMENTS: 'documents',
+    DOWNLOAD_INVOICE: 'download_invoice',
+    EMAIL: 'email',
+    FEEDBACK: 'feedbacks',
+    FORGET_PASSWORD: 'forget-password',
+    FURNISH_MY_PROPERTY: 'furnish_my_property',
+    GALLERY: 'gallery',
+    GENERATE_PAYU_HASH: 'generate_hash',
+    IMPORTANT_NUMBERS: 'contacts',
+    INVENTORIES: 'inventories',
+    INVOICES: 'invoices',
+    LAUNDRY: 'laundry',
+    LOGIN: 'login',
+    MIS_SUMMARY: 'mis_summary',
+    NOTIFICATIONS: 'notifications',
+    PAYMENT: 'payment',
+    PLANS: 'plans',
+    PROGRESS: 'progress',
+    PROJECTS: 'projects',
+    RECOMMENDATIONS: 'recommendations',
+    SERVICE_REQUEST: 'service_requests',
+    SETTINGS: 'settings',
+    SITE_VISIT_REQUEST: 'site_visit_requests',
+    STORAGE: 'storage/presigned_url',
+    SURVEY: 'survey',
+    TEAM: 'team',
+    TESTIMONIALS: 'testimonials',
+    TYPES: 'types',
+    TRANSACTION: 'transaction',
+    UNITS: 'units',
+    USER: 'user',
+    WEBHOOK: 'webhook',
+  },
+}
+
+export interface IApiResponse<T> {
+  code?: number | string
+  data?: T
+  message: string
+  status?: number
+  headers?: object
+}
+
+export enum RequestType {
+  DELETE = 'DELETE',
+  GET = 'GET',
+  PATCH = 'PATCH',
+  POST = 'POST',
+  PUT = 'PUT',
+}
+
+export enum ApiStatusPreset {
+  CreateBlockDate = 'createBlockDate',
+  CreateBookAStayRequest = 'createBookAStayRequest',
+  CreateComplaint = 'createComplaint',
+  CreateServiceRequest = 'createServiceRequest',
+  CreateSurvey = 'createSurvey',
+  CreateTransaction = 'createTransaction',
+  DeleteServiceRequest = 'deleteServiceRequest',
+  DeleteSiteVisitRequest = 'deleteSiteVisitRequest',
+  ForgetPassword = 'forgetPassword',
+  GeneratePayUHash = 'generatePayUHash',
+  GetBlockDates = 'getBlockDates',
+  GetBookAStayData = 'getBookAStayData',
+  GetCatamaranConfig = 'getCatamaranConfig',
+  GetCleaningData = 'getCleaningData',
+  GetComparisonRevenue = 'getComparisonRevenue',
+  GetComplaintTypes = 'getComplaintTypes',
+  GetConfig = 'GetConfig',
+  GetCustomerTestimonials = 'getCustomerTestimonials',
+  GetDemandPayment = 'getDemandPayment',
+  GetDocuments = 'getDocuments',
+  GetExploreGoa = 'getExploreGoa',
+  GetFinancialYear = 'getFinancialYear',
+  GetGalleryData = 'getGalleryData',
+  GetImportantNumbers = 'getImportantNumbers',
+  GetInsightData = 'getInsightData',
+  GetInventories = 'getInventories',
+  GetInvoiceDocLink = 'GetInvoiceDocLink',
+  GetInvoices = 'getInvoices',
+  GetMisSummaryData = 'getMisSummaryData',
+  GetMonthlyRevenue = 'getMonthlyRevenue',
+  GetNotifications = 'getNotifications',
+  GetPastComplaints = 'getPastComplaints',
+  GetPastFeedback = 'getPastFeedback',
+  GetPastServiceRequest = 'getPastServiceRequest',
+  GetPaymentDocument = 'getPaymentDocument',
+  GetPlans = 'getPlans',
+  GetProfile = 'getProfile',
+  GetProgress = 'getProgress',
+  GetProject = 'getProject',
+  GetServiceRequest = 'getServiceRequest',
+  GetSiteVisitRequest = 'getSiteVisitRequest',
+  GetSurveyData = 'getSurveyData',
+  GetTeam = 'getTeam',
+  GetTransaction = 'getTransaction',
+  GetYearlyRevenueSummary = 'getYearlyRevenueSummary',
+  LoginUser = 'loginUser',
+  SendEmail = 'sendEmail',
+  SubmitEscalateRequest = 'escalateRequest',
+  SubmitFeedback = 'submitFeedback',
+  SubmitFurnishPropertyRequest = 'submitFurnishPropertyRequest',
+  SubmitSiteVisitRequest = 'submitSiteVisitRequest',
+  UnblockDate = 'unblockDate',
+  UpdateNotification = 'updateNotification',
+  UpdateNotificationSettings = 'updateNotificationSettings',
+  UpdateProject = 'updateProject',
+  UploadDocuments = 'uploadDocuments',
+}
+
+export enum RequestStatus {
+  Completed = 'COMPLETED',
+  DeletedByUser = 'DELETED_BY_USER',
+  NotStarted = 'NOT_STARTED',
+  Processing = 'PROCESSING',
+  Rejected = 'REJECTED',
+}
+
+export enum SiteVisitRequestStatus {
+  Completed = 'COMPLETED',
+  CancelledByUser = 'CANCELLED_BY_USER',
+  VisitRequested = 'VISIT_REQUESTED',
+  VisitConfirmed = 'VISIT_CONFIRMED',
+  Rejected = 'REJECTED',
+}
+
+export enum ApiMessage {
+  BookAStaySuccess = 'BOOK_A_STAY',
+  CatamaranBookingSuccess = 'CATAMARAN_BOOKING_SUCCESS',
+  ChangePasswordSuccess = 'CHANGE_PASSWORD_SUCCESS',
+  Default = 'DEFAULT',
+  Document = 'DOCUMENT',
+  DownloadError = 'MEDIA_DOWNLOAD_ERROR',
+  DownloadSuccess = 'MEDIA_DOWNLOAD_SUCCESS',
+  Escalation = 'ESCALATION',
+  EscalationError = 'ESCALATION_ERROR',
+  Feedback = 'FEEDBACK',
+  FeedbackSubmitError = 'FEEDBACK_SUBMIT_ERROR',
+  FileSizeExceeded = 'MAX_FILE_SIZE_ERROR',
+  FurnishMyPropertySuccess = 'FURNISH_MY_PROPERTY_SUCCESS',
+  LogoutWarning = 'LOGOUT_WARNING',
+  MediaUploadError = 'MEDIA_UPLOAD_ERROR',
+  NotificationSettingsError = 'NOTIFICATION_SETTINGS_ERROR',
+  NotificationSettingsSuccess = 'NOTIFICATION_SETTINGS_SUCCESS',
+  RaiseARequest = 'RAISE_A_REQUEST',
+  RentalRequestSuccess = 'RENTAL_REQUEST_SUCCESS',
+  RequestDeleteFailed = 'REQUEST_DELETE_FAILED',
+  RequestDeleteSuccess = 'REQUEST_DELETE_SUCCESS',
+  SurveySuccess = 'SURVEY_SUCCESS',
+  UserNotRegistered = 'USER_NOT_REGISTERED',
+  VisitRequestSuccess = 'VISIT_REQUEST_SUCCESS',
+}
+
+export const API_TIMEOUT = 15000

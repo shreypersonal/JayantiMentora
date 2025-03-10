@@ -1,0 +1,9 @@
+export const ADDRESS_REGEX = /^\D{10,}$/
+export const EMAIL_REGEX = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/
+export const EXTRA_SPACES_REGEX = /\s+/g
+export const NAME_REGEX = /^(?=.*\S)\D+$/
+export const NON_ALPHANUMERIC_REGEX = /[^\w\s.-]/gi
+export const NUMERIC_REGEX = /(^\d+$|^$)/
+export const PASSWORD_REGEX = /^(?=.*[A-Z])[A-Za-z\d]{8}$/
+export const PHONE_REGEX = /^(?:\+\d{1,3})?(?:\s?\d){7,20}$/
+export const UNDERSCORE_REGEX = /_/g
