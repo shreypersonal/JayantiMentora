@@ -13,10 +13,10 @@ LogBox.ignoreAllLogs() // Ignore all log notifications
 
 const App = observer(() => {
   return (
-<GestureHandlerRootView style={commonStyles.flex_1}>
+    <GestureHandlerRootView style={commonStyles.flex_1}>
       <SafeAreaProvider>
-        <StatusBar barStyle="dark-content" backgroundColor="transparent" translucent />
-        <SafeAreaView style={commonStyles.flex_1}>
+        <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
+        <SafeAreaView style={[commonStyles.flex_1, { backgroundColor: '#5F2DED' }]}>
           <RootNavigator isUserLoggedIn />
         </SafeAreaView>
       </SafeAreaProvider>
