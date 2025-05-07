@@ -1,10 +1,10 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 
-const Profile = () => (
+const Store = () => (
   <View>
-    <Text>Profile</Text>
+    <Text>Store</Text>
   </View>
 )
 
-export default Profile
+export default Store

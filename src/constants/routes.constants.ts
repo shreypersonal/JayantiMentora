@@ -1,17 +1,17 @@
-import { DocumentIcon, HomeIcon, PhoneIcon } from 'react-native-heroicons/outline'
+import { AcademicCapIcon, HomeIcon, BuildingStorefrontIcon} from 'react-native-heroicons/outline'
 
-import { Courses, Home, Profile } from '@screens'
+import { Lectures, Home, Store } from '@screens'
 
 export enum RouteName {
   Home = 'Home',
   Login = 'Login',
-  Profile = 'Profile',
-  Courses = 'Courses',
+  Store = 'Store',
+  Lectures = 'Lectures',
   TabNavigator = 'TabNavigator',
 }
 
 export const TAB_DATA = [
-  { name: 'home', component: Home, icon: HomeIcon },
-  { name: 'Profile', component: Courses, icon: DocumentIcon },
-  { name: 'Courses', component: Profile, icon: PhoneIcon },
+  { name: 'Home', component: Home, icon: HomeIcon },
+  { name: 'Store', component: Store, icon: BuildingStorefrontIcon },
+  { name: 'Lectures', component: Lectures, icon: AcademicCapIcon },
 ]

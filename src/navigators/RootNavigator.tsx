@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { createNavigationContainerRef } from '@react-navigation/native'
+import { createNavigationContainerRef, NavigationContainer } from '@react-navigation/native'
 
 import { observer } from 'mobx-react-lite'
 
@@ -25,7 +25,7 @@ const RootNavigator = observer((props: IRootNavigatorProps) => {
     component = <AuthNavigator />
   }
 
-  return component
+  return <NavigationContainer>{component}</NavigationContainer>
 })
 
 export { RootNavigator }

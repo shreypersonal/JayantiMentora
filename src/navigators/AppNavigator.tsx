@@ -16,7 +16,7 @@ const AppNavigator = () => {
     <AppStack.Navigator
       screenOptions={{
         headerShown: false,
-        contentStyle: { backgroundColor: 'white' },
+        contentStyle: { backgroundColor: 'pink' },
       }}>
       <AppStack.Screen name={RouteName.TabNavigator} component={TabNavigator} />
     </AppStack.Navigator>

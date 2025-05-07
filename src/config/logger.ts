@@ -1,5 +1,4 @@
 import { logger } from 'react-native-logs'
-import { consoleTransport } from 'react-native-logs/dist/transports/consoleTransport'
 
 const logLevels = {
   debug: 0,
