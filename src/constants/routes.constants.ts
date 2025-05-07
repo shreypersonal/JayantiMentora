@@ -1,4 +1,4 @@
-import { AcademicCapIcon, HomeIcon, BuildingStorefrontIcon} from 'react-native-heroicons/outline'
+import { AcademicCapIcon, HomeIcon, BuildingStorefrontIcon } from 'react-native-heroicons/outline'
 
 import { Lectures, Home, Store } from '@screens'
 

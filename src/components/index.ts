@@ -1,1 +1,1 @@
-// export { default as JMAccordion } from './accordion/VIAccordion'
+export { default as JMCarousel } from './carousel/JMCarousel'
